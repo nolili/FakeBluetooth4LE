@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C082EB715AE781A001B2C73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C082EB615AE781A001B2C73 /* UIKit.framework */; };
+		8C082EB915AE781A001B2C73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C082EB815AE781A001B2C73 /* Foundation.framework */; };
+		8C082EBB15AE781A001B2C73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C082EBA15AE781A001B2C73 /* CoreGraphics.framework */; };
+		8C082EC115AE781A001B2C73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C082EBF15AE781A001B2C73 /* InfoPlist.strings */; };
+		8C082EC315AE781A001B2C73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C082EC215AE781A001B2C73 /* main.m */; };
+		8C082EC715AE781A001B2C73 /* NRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C082EC615AE781A001B2C73 /* NRAppDelegate.m */; };
+		8C082ECA15AE781A001B2C73 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C082EC815AE781A001B2C73 /* MainStoryboard.storyboard */; };
+		8C082ECD15AE781A001B2C73 /* NRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C082ECC15AE781A001B2C73 /* NRViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C082EB215AE781A001B2C73 /* FakeBluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeBluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C082EB615AE781A001B2C73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C082EB815AE781A001B2C73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C082EBA15AE781A001B2C73 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C082EBE15AE781A001B2C73 /* FakeBluetooth-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FakeBluetooth-Info.plist"; sourceTree = "<group>"; };
+		8C082EC015AE781A001B2C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C082EC215AE781A001B2C73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C082EC415AE781A001B2C73 /* FakeBluetooth-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FakeBluetooth-Prefix.pch"; sourceTree = "<group>"; };
+		8C082EC515AE781A001B2C73 /* NRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRAppDelegate.h; sourceTree = "<group>"; };
+		8C082EC615AE781A001B2C73 /* NRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRAppDelegate.m; sourceTree = "<group>"; };
+		8C082EC915AE781A001B2C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8C082ECB15AE781A001B2C73 /* NRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRViewController.h; sourceTree = "<group>"; };
+		8C082ECC15AE781A001B2C73 /* NRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C082EAF15AE781A001B2C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C082EB715AE781A001B2C73 /* UIKit.framework in Frameworks */,
+				8C082EB915AE781A001B2C73 /* Foundation.framework in Frameworks */,
+				8C082EBB15AE781A001B2C73 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C082EA715AE781A001B2C73 = {
+			isa = PBXGroup;
+			children = (
+				8C082EBC15AE781A001B2C73 /* FakeBluetooth */,
+				8C082EB515AE781A001B2C73 /* Frameworks */,
+				8C082EB315AE781A001B2C73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C082EB315AE781A001B2C73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C082EB215AE781A001B2C73 /* FakeBluetooth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C082EB515AE781A001B2C73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C082EB615AE781A001B2C73 /* UIKit.framework */,
+				8C082EB815AE781A001B2C73 /* Foundation.framework */,
+				8C082EBA15AE781A001B2C73 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C082EBC15AE781A001B2C73 /* FakeBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				8C082EC515AE781A001B2C73 /* NRAppDelegate.h */,
+				8C082EC615AE781A001B2C73 /* NRAppDelegate.m */,
+				8C082EC815AE781A001B2C73 /* MainStoryboard.storyboard */,
+				8C082ECB15AE781A001B2C73 /* NRViewController.h */,
+				8C082ECC15AE781A001B2C73 /* NRViewController.m */,
+				8C082EBD15AE781A001B2C73 /* Supporting Files */,
+			);
+			path = FakeBluetooth;
+			sourceTree = "<group>";
+		};
+		8C082EBD15AE781A001B2C73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C082EBE15AE781A001B2C73 /* FakeBluetooth-Info.plist */,
+				8C082EBF15AE781A001B2C73 /* InfoPlist.strings */,
+				8C082EC215AE781A001B2C73 /* main.m */,
+				8C082EC415AE781A001B2C73 /* FakeBluetooth-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C082EB115AE781A001B2C73 /* FakeBluetooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C082ED015AE781A001B2C73 /* Build configuration list for PBXNativeTarget "FakeBluetooth" */;
+			buildPhases = (
+				8C082EAE15AE781A001B2C73 /* Sources */,
+				8C082EAF15AE781A001B2C73 /* Frameworks */,
+				8C082EB015AE781A001B2C73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FakeBluetooth;
+			productName = FakeBluetooth;
+			productReference = 8C082EB215AE781A001B2C73 /* FakeBluetooth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C082EA915AE781A001B2C73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = nori;
+			};
+			buildConfigurationList = 8C082EAC15AE781A001B2C73 /* Build configuration list for PBXProject "FakeBluetooth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C082EA715AE781A001B2C73;
+			productRefGroup = 8C082EB315AE781A001B2C73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C082EB115AE781A001B2C73 /* FakeBluetooth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C082EB015AE781A001B2C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C082EC115AE781A001B2C73 /* InfoPlist.strings in Resources */,
+				8C082ECA15AE781A001B2C73 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C082EAE15AE781A001B2C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C082EC315AE781A001B2C73 /* main.m in Sources */,
+				8C082EC715AE781A001B2C73 /* NRAppDelegate.m in Sources */,
+				8C082ECD15AE781A001B2C73 /* NRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8C082EBF15AE781A001B2C73 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C082EC015AE781A001B2C73 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C082EC815AE781A001B2C73 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C082EC915AE781A001B2C73 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C082ECE15AE781A001B2C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8C082ECF15AE781A001B2C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C082ED115AE781A001B2C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FakeBluetooth/FakeBluetooth-Prefix.pch";
+				INFOPLIST_FILE = "FakeBluetooth/FakeBluetooth-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C082ED215AE781A001B2C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FakeBluetooth/FakeBluetooth-Prefix.pch";
+				INFOPLIST_FILE = "FakeBluetooth/FakeBluetooth-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C082EAC15AE781A001B2C73 /* Build configuration list for PBXProject "FakeBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C082ECE15AE781A001B2C73 /* Debug */,
+				8C082ECF15AE781A001B2C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C082ED015AE781A001B2C73 /* Build configuration list for PBXNativeTarget "FakeBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C082ED115AE781A001B2C73 /* Debug */,
+				8C082ED215AE781A001B2C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C082EA915AE781A001B2C73 /* Project object */;
+}
