@@ -36,7 +36,7 @@
 }
 
 - (IBAction)zero:(id)sender {
-    [_peripheral setBTValue:1];
+    [_peripheral setBTValue:0];
 }
 
 - (IBAction)hyaku:(id)sender {
@@ -45,5 +45,11 @@
 
 - (IBAction)max:(id)sender {
     [_peripheral setBTValue:255];
+}
+- (IBAction)start:(id)sender {
+    [_peripheral startPeripheral];
+}
+- (IBAction)stop:(id)sender {
+    [_peripheral stopPeripheral];
 }
 @end

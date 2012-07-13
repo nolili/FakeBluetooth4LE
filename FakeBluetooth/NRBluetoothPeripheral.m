@@ -18,6 +18,7 @@
     __strong CBMutableCharacteristic *_heartRateChar;
     __strong CBMutableCharacteristic *_sensorLocationChar;
     __strong CBMutableCharacteristic *_controlPointChar;
+    BOOL _isSubscribed;
 }
 @end
 @implementation NRBluetoothPeripheral
@@ -26,8 +27,8 @@
 {
     self = [super init];
     if (self) {
-        _peripheralManager = [[CBPeripheralManager alloc]
-                              initWithDelegate:self queue:nil];
+        
+        
     }
     return self;
 }
@@ -81,6 +82,9 @@
     if (peripheral.state == CBPeripheralManagerStatePoweredOn){
         [self setupPeripheralManager];
     }
+    else{
+        [self stopPeripheral];
+    }
 }
 
 // CBCentralManagerDelegateRequredMethod
@@ -102,14 +106,17 @@
 - (void)peripheralManager:(CBPeripheralManager *)peripheral centralDidConnect:(CBCentral *)central
 {
     [peripheral stopAdvertising];
-    //[self notifyLocalNotification:[NSString stringWithCString:__FUNCTION__ encoding:NSUTF8StringEncoding]];
+    _central = central;
+    
+   
+    
 }
 
 // peripheralの接続が切断した際に呼び出される
 - (void)peripheralManager:(CBPeripheralManager *)peripheral centralDidDisconnect:(CBCentral *)central
 {
-    
-    //[self notifyLocalNotification:[NSString stringWithCString:__FUNCTION__ encoding:NSUTF8StringEncoding]];
+    _central = nil;
+    [self stopPeripheral];
 }
 
 // peripheralManagerにサービスが追加された際に呼び出される
@@ -125,8 +132,11 @@
 // characteristicの監視が開始された際に呼び出される
 - (void)peripheralManager:(CBPeripheralManager *)peripheral
                   central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
+
 {
     NSLog(@"%s", __FUNCTION__);
+    _isSubscribed = YES;
+     [self setBTValue:10];
     
 }
 
@@ -136,6 +146,7 @@
 didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 {
     NSLog(@"%s", __FUNCTION__);
+    _isSubscribed = NO;
 }
 
 // characteristicへのread要求があった際に呼び出される
@@ -153,7 +164,13 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
         {
             [data appendData:req.value];
         }
-        NSLog(@"%@", data);
+        NSLog(@">>書き込まれたデータ%@", data);
+        
+        uint8_t value = *(uint8_t *)[data bytes];
+        if (value == 1){
+            _isSubscribed = YES;
+            [self setBTValue:0];
+        }
     }
     NSLog(@"%s", __FUNCTION__);
     //NSLog(@"%@", requests);
@@ -161,23 +178,34 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 
 - (void)startPeripheral
 {
-    //[self setupPeripheralManager];
+    if (!_peripheralManager){
+        _peripheralManager = [[CBPeripheralManager alloc]
+                             initWithDelegate:self queue:nil];
+        _isSubscribed = NO;
+    }
 }
 
 - (void)stopPeripheral
 {
     [_peripheralManager stopAdvertising];
     [_peripheralManager removeAllServices];
+    _heartRateChar = nil;
+    _sensorLocationChar = nil;
+    _controlPointChar = nil;
+    _peripheralManager = nil;
 }
 
 - (void)setBTValue:(uint8_t)value
 {
+    if (_isSubscribed && _heartRateChar){
     static const uint8_t datalength = 2;
     uint8_t data[datalength];
     data[0] = 0;
     data[1] = value;
     
-    [_peripheralManager updateValue:[NSData dataWithBytes:data length:datalength] forCharacteristic:_heartRateChar onSubscribedCentrals:nil];
+    [_peripheralManager
+     updateValue:[NSData dataWithBytes:data length:datalength] forCharacteristic:_heartRateChar onSubscribedCentrals:nil];
+    }
 }
 
 @end

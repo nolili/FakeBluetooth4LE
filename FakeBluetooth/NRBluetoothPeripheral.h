@@ -12,4 +12,5 @@
 - (void)startPeripheral;
 - (void)stopPeripheral;
 - (void)setBTValue:(uint8_t)value;
+
 @end
