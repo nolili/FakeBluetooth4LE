@@ -192,6 +192,7 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
     _heartRateChar = nil;
     _sensorLocationChar = nil;
     _controlPointChar = nil;
+    _peripheralManager.delegate = nil;
     _peripheralManager = nil;
 }
 
