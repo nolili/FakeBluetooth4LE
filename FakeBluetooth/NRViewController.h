@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NRBluetoothPeripheral.h"
 
 @interface NRViewController : UIViewController
+{
+   
+}
+- (IBAction)zero:(id)sender;
+- (IBAction)hyaku:(id)sender;
+- (IBAction)max:(id)sender;
 
 @end

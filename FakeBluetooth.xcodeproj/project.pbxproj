@@ -15,6 +15,8 @@
 		8C082EC715AE781A001B2C73 /* NRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C082EC615AE781A001B2C73 /* NRAppDelegate.m */; };
 		8C082ECA15AE781A001B2C73 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C082EC815AE781A001B2C73 /* MainStoryboard.storyboard */; };
 		8C082ECD15AE781A001B2C73 /* NRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C082ECC15AE781A001B2C73 /* NRViewController.m */; };
+		8C082ED415AE7861001B2C73 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C082ED315AE7861001B2C73 /* CoreBluetooth.framework */; };
+		8C082EDB15AE7A56001B2C73 /* NRBluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C082EDA15AE7A56001B2C73 /* NRBluetoothPeripheral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		8C082EC915AE781A001B2C73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8C082ECB15AE781A001B2C73 /* NRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRViewController.h; sourceTree = "<group>"; };
 		8C082ECC15AE781A001B2C73 /* NRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRViewController.m; sourceTree = "<group>"; };
+		8C082ED315AE7861001B2C73 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8C082ED915AE7A56001B2C73 /* NRBluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRBluetoothPeripheral.h; sourceTree = "<group>"; };
+		8C082EDA15AE7A56001B2C73 /* NRBluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRBluetoothPeripheral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C082ED415AE7861001B2C73 /* CoreBluetooth.framework in Frameworks */,
 				8C082EB715AE781A001B2C73 /* UIKit.framework in Frameworks */,
 				8C082EB915AE781A001B2C73 /* Foundation.framework in Frameworks */,
 				8C082EBB15AE781A001B2C73 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +73,7 @@
 		8C082EB515AE781A001B2C73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C082ED315AE7861001B2C73 /* CoreBluetooth.framework */,
 				8C082EB615AE781A001B2C73 /* UIKit.framework */,
 				8C082EB815AE781A001B2C73 /* Foundation.framework */,
 				8C082EBA15AE781A001B2C73 /* CoreGraphics.framework */,
@@ -77,6 +84,8 @@
 		8C082EBC15AE781A001B2C73 /* FakeBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				8C082ED915AE7A56001B2C73 /* NRBluetoothPeripheral.h */,
+				8C082EDA15AE7A56001B2C73 /* NRBluetoothPeripheral.m */,
 				8C082EC515AE781A001B2C73 /* NRAppDelegate.h */,
 				8C082EC615AE781A001B2C73 /* NRAppDelegate.m */,
 				8C082EC815AE781A001B2C73 /* MainStoryboard.storyboard */,
@@ -165,6 +174,7 @@
 				8C082EC315AE781A001B2C73 /* main.m in Sources */,
 				8C082EC715AE781A001B2C73 /* NRAppDelegate.m in Sources */,
 				8C082ECD15AE781A001B2C73 /* NRViewController.m in Sources */,
+				8C082EDB15AE7A56001B2C73 /* NRBluetoothPeripheral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

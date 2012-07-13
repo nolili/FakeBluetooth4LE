@@ -7,9 +7,11 @@
 //
 
 #import "NRViewController.h"
-
+#import "NRBluetoothPeripheral.h"
 @interface NRViewController ()
-
+{
+    __strong NRBluetoothPeripheral *_peripheral;
+}
 @end
 
 @implementation NRViewController
@@ -17,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _peripheral = [[NRBluetoothPeripheral alloc] init];
+    [_peripheral startPeripheral];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,4 +35,15 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)zero:(id)sender {
+    [_peripheral setBTValue:1];
+}
+
+- (IBAction)hyaku:(id)sender {
+    [_peripheral setBTValue:100];
+}
+
+- (IBAction)max:(id)sender {
+    [_peripheral setBTValue:255];
+}
 @end
